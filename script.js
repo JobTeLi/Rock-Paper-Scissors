@@ -1,3 +1,7 @@
+let playerWins = 0
+let computerWins = 0
+
+
 //make function for computer choice
 function getComputerChoice() {
 
@@ -27,32 +31,37 @@ function playRound(playerSelection, computerSelection) {
   }
 //if the player picks rock and computer paper computer wins
   if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
-    return "Congrats to the computer paper beats rock!";
+    return "Congrats to the computer paper beats rock!"; computerWins++;
   }
 //if the player picks rock and computer scissor player wins
   if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissor") {
-    return "Congrats to the player rock beats scissor";
+    return "Congrats to the player rock beats scissor"; playerWins++;
   } 
 //if the player picks paper and computer rock player wins
   if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock") {
-    return "Congrats to the player paper beats rock!";
+    return "Congrats to the player paper beats rock!"; playerWins++;
   }
 //if the player picks paper and computer scissor computer wins
   if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissor") {
-    return "Congrats to the computer scissor beats paper!";
+    return "Congrats to the computer scissor beats paper!"; computerWins++;
   }
 //if the player picks scissor and computer rock computer wins
   if (playerSelection.toLowerCase() === "scissor" && computerSelection === "rock") {
-    return "Congrats to the computer rock beats scissor!";
+    return "Congrats to the computer rock beats scissor!"; computerWins++;
   }
 //if the player picks scissor and computer paper player wins
   if (playerSelection.toLowerCase() === "scissor" && computerSelection === "paper") {
-    return "Congrats to the player scissor beats paper!";
+    return "Congrats to the player scissor beats paper!"; playerWins++;
   }
 //make sure toLowerCase everything
+ 
+} 
 
-}
-
-const playerSelection = "rock";
+const playerSelection = prompt("Choose Rock Paper Scissor!");
 const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection,computerSelection));
+
+
+function game() {
+  
+  return playRound(playerSelection,computerSelection);
+}
