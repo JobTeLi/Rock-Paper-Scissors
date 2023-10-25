@@ -56,7 +56,6 @@ const buttons = document.querySelectorAll('button');
 const player_Score = document.querySelector('#player-score');
 const computer_Score = document.querySelector('#computer-score');
 const Winner = document.querySelector('#Winner');
-
 const score = document.querySelector('.display-result');
 
 
@@ -94,7 +93,21 @@ buttons.forEach((button) =>{
         
     });
 });
-
+/*const reset = document.querySelector('#reset');
+reset.addEventListener("click", () => {
+    playerScore = 0;
+    computerScore = 0;
+    Winner.textContent = "";
+    player_Score.textContent = playerScore;
+    computer_Score.textContent = computerScore;
+    buttons.forEach((button) => {
+        button.disabled = false;
+    });
+    const temp_res = document.querySelectorAll(".temp_result");
+    temp_res.forEach((res) => {
+        res.remove();
+    })
+})*/
 
 
 /*function game() {
