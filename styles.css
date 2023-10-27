@@ -1,0 +1,71 @@
+html {
+    
+    background-image: url("img/background.jpg");
+    background-color: #000000;
+    background-size: 100% 100%;
+    color: azure;
+    font-family: monaco, monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+    margin: 50px;
+    background-color: bisque;
+}
+
+#rock {
+    background-image: url(img/rock.png);
+    background-size: 100%;
+}
+
+#paper {
+    background-image: url(img/paper.png);
+    background-size: 100%;
+}
+
+#scissors {
+    background-image: url(img/scissors.png);
+    background-size: 100%;
+}
+
+.head-text {
+    font-size: 70px;
+}
+
+.weapon-line {
+    font-size: 30px;
+}
+
+.text-line {
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+}
+
+#player {
+    color: #00cc00;
+}
+
+#comp {
+    color: #e62e00;
+}
+
+#output {
+    font-size: 30px;
+}
+
+
+
+
