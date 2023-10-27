@@ -3,18 +3,18 @@ let compPick = {Value: ""};
 let playerPick;
 let compPickInt = 0;
 let playerPickInt = 0;
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll(".btn");
 
 let playerScore = 0;
 let compScore = 0;
 
-const player = document.querySelector("");
+const player = document.querySelector("#player");
 player.textContent = `Player score: ${playerScore}`;
 
-const comp = document.querySelector("");
+const comp = document.querySelector("#comp");
 comp.textContent = `Computer Score: ${compScore}`;
 
-const output = document.querySelector("");
+const output = document.querySelector("#output");
 output.textContent = "Good Luck Have Fun!";
 // make the buttons work as picks for the user
 buttons.forEach((button) => {button.addEventListener('click', ()=>{
@@ -37,13 +37,13 @@ buttons.forEach((button) => {button.addEventListener('click', ()=>{
 function getComputerPick(compPick){
     let choice = Math.floor(Math.random() * 3);
     if (choice == 0){
-        choice.Value = "rock";
+        compPick.Value = "rock";
     }
     else if (choice == 1){
-        choice.Value = "paper";
+        compPick.Value = "paper";
     }
     else if (choice == 2){
-        choice.Value = "scissors"
+        compPick.Value = "scissors"
     }
     return choice;
 }
@@ -57,14 +57,14 @@ function playRound() {
                     [2, 1, 0]];
     let result = win_array[playerPickInt][compPickInt];
     if (result == 0){
-        output.textContent = `Tie game! You picked ${playerPick} and The Computer ${compPick}`;
+        output.textContent = `Tie game! You picked ${playerPick} and The Computer ${compPick.Value}`;
     }
     else if (result == 1){
-        output.textContent = `Winner Winner Chicken Dinner! You picked ${playerPick} and The Computer ${compPick}}`;
+        output.textContent = `Winner Winner Chicken Dinner! You picked ${playerPick} and The Computer ${compPick.Value}}`;
         playerScore++;
     }
     else if (result == 2){
-        output.textContent = `LOSEEER! You picked ${playerPick} and The Computer ${compPick}`;
+        output.textContent = `LOSEEER! You picked ${playerPick} and The Computer ${compPick.Value}`;
         compScore++;
     }
 }
